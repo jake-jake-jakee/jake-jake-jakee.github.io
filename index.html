@@ -18,12 +18,12 @@
     }
 
     .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background:whitesmoke;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+        background:whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
@@ -37,27 +37,42 @@
     }
 
     .form-group {
-            margin-bottom: 15px;
+        margin-bottom: 15px;
     }
 
     label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
     }
 
     input[type="text"], select, textarea {
-            font-family: Arial, Helvetica, sans-serif;
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
     }
 
     textarea {
-            height: 100px;
-            resize: vertical;
+        height: 100px;
+        resize: vertical;
+    }
+
+    .rating-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .rating-label-left {
+        min-width: 35px;
+    }
+
+    .rating-label-right {
+        min-width: 35px;
     }
 
     .star-rating {
@@ -86,17 +101,17 @@
     }
 
     button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
     }
 
     button:hover {
-            background-color: #2980b9;
+        background-color: #2980b9;
     }
 
 </style>
@@ -155,7 +170,9 @@
 
                 <div class="form-group">
                     <label>Teacher Rating:</label>
-                    <div class="star-rating">
+                    <div class="rating-row">
+                        <span class="rating-label-left">Poor</span>
+                        <div class="star-rating">
                         <input type="radio" name="rating" id="star5" value="5" required>
                         <label for="star5">&#9733;</label>
 
@@ -170,8 +187,11 @@
 
                         <input type="radio" name="rating" id="star1" value="1">
                         <label for="star1">&#9733;</label>
+                        </div>
+                        <span class="rating-label-right">Excellent</span>
                     </div>
                 </div>
+                
                 
                     <div class="form-group">
                     <label for="favlesson"> Favorite Lesson </label>
